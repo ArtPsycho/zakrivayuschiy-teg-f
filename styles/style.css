@@ -297,6 +297,14 @@
   font-weight: var(--main-weight);
   font-style: normal;
   z-index: 2;
+  color: var(--button-text-color);
+  mix-blend-mode: difference;
+
+  /* Строки ниже решают проблему утолщения шрифта
+  после применения difference */
+  background: var(--button-text-color);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 /* save-button */
@@ -314,7 +322,6 @@
   cursor: pointer;
   overflow: hidden;
   z-index: 0;
-  
 }
 
 .content__save-button:focus {
@@ -333,7 +340,6 @@
   transform: translateX(-100%);
   transition: 0.5s ease-in-out;
   z-index: 1;
-  
 }
 
 .content__save-button:hover::before {
