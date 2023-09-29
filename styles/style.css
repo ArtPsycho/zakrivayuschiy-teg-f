@@ -297,14 +297,6 @@
   font-weight: var(--main-weight);
   font-style: normal;
   z-index: 2;
-  color: var(--button-text-color);
-  mix-blend-mode: difference;
-
-  /* Строки ниже решают проблему утолщения шрифта 
-  при отрисовке после применения difference */
-  background: var(--button-text-color);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 
 /* save-button */
