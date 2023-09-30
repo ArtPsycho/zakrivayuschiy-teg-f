@@ -171,12 +171,52 @@
   max-inline-size: 100%;
   aspect-ratio: 1/1;
   background-color: #d3d3d3;
-  padding: 25px;
   display: flex;
   justify-content: end;
+  position: relative;
+}
+
+.image {
+  inline-size: 100%;
+  object-fit:cover;
+  object-position: center;
+}
+
+.filter-brightness {
+  filter: brightness(1.2);
+}
+
+.filter-blur {
+  filter: blur(0.5px) contrast(0.9) saturate(1.3);
+}
+
+.filter-invert {
+  filter: invert(0.1);
+}
+
+.filter-hue {
+  filter: hue-rotate(20deg);
+}
+
+.filter-contrast {
+  filter: contrast(0.85);
+}
+
+.filter-grayscale {
+  filter: grayscale(0.7);
+}
+
+.filter-saturation {
+  filter: saturate(1.5);
+}
+
+.filter-sepia {
+  filter: sepia(0.1);
 }
 
 .image-label {
+  position: absolute;
+  margin: 25px;
   color: var(--accent-color);
   font-family: var(--accent-font);
   font-size: 14px;
@@ -384,8 +424,6 @@
 
 .content__save-button {
   position: relative;
-  width: 335px;
-  height: 51px;
   background-color: var(--background-color);
   border: 2px solid var(--accent-color);
   display: flex;
@@ -395,6 +433,11 @@
   cursor: pointer;
   overflow: hidden;
   z-index: 0;
+}
+
+.save-button-size {
+  width: 335px;
+  height: 51px;
 }
 
 .content__save-button:focus {
@@ -422,13 +465,75 @@
 .save-icon {
   color: var(--button-text-color);
   mix-blend-mode: difference;
-  width: 21px;
-  height: 21px;
   z-index: 2;
 }
 
+.save-button-icon {
+  width: 21px;
+  height: 21px;
+}
+
+/* dialog */
+
+.save-button_dialog {
+  max-width: 353px;
+  background-color: var(--background-color);
+  border: 2px solid var(--accent-color);
+  padding: 30px;
+}
+
+.save-button_dialog::backdrop {
+  background-color: #000;
+  opacity: 0.75;
+}
+
+.dialog-window {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.dialog-window_info {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.modal-icon {
+  max-width: 39px;
+}
+
+.dialog__text {
+  font-family: var(--accent-font);
+  font-size: 14px;
+  font-weight: var(--main-weight);
+  color: var(--accent-color);
+  line-height: 150%;
+  text-transform: uppercase;
+}
+
+.close-button-size {
+  min-width: 100%;
+  height: 38px;
+}
+
+
+/* media */
+
 @media screen and (width <= 375px) {
+  
   .content__save-button {
-    width: 100%;
+    flex-direction: column;
+  }
+  
+  .save-button-size {
+    width: 306px;
+    height: 84px;
+  }
+
+  .save-button_dialog {
+    margin: auto 15px;
+    padding: 30px 42px;
   }
 }
