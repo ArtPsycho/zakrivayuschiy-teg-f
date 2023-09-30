@@ -52,7 +52,7 @@
 .header__title {
   color: var(--accent-color);
   font-family: var(--accent-font);
-  font-size: clamp(3.0625rem, 1.9087rem + 4.9231vw, 4.0625rem);
+  font-size: clamp(2.875rem, 1.875rem + 4.9231vw, 4.0625rem);
   font-style: normal;
   font-weight: var(--main-weight);
   text-transform: uppercase;
