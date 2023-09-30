@@ -23,3 +23,23 @@
       margin: 0 -16px;
     }
   }
+
+  @keyframes heart-breathe {
+    0% {
+      scale: 1;
+    }
+  
+    100% {
+      scale: 1.5;
+    }
+  }
+  
+  @keyframes sparks-glow {
+    0% {
+      opacity: 0;
+    }
+  
+    100% {
+      opacity: 1;
+    }
+  }

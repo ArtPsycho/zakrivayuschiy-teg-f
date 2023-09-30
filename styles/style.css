@@ -220,13 +220,15 @@
   line-height: 21px;
 }
 
-/* like-button */
+/* группа like */
 
 .card__buttons {
   display: flex;
   gap: 12px;
   align-items: center;
 }
+
+/* icon-button */
 
 .card__icon-button {
   padding: 0;
@@ -248,11 +250,82 @@
   transition: 0.3s ease;
 }
 
+/* hover like-icon */
+
+.card__icon-button .core {
+  fill: var(--background-color);
+  transition: fill 0.3s 0.03s;
+}
+
+.card__icon-button:hover .core {
+  fill: var(--accent-color);
+  transition: fill 0.3s;
+}
+
+.card__icon-button .main-body {
+  fill: var(--background-color);
+  transition: fill 0.3s;
+}
+
+.card__icon-button:hover .main-body {
+  fill: var(--accent-color);
+  transition: fill 0.3s 0.05s;
+}
+
+/* active like-icon */
+
+.card__icon-button:active .core {
+  fill: var(--accent-fill);
+  transition: fill 0.3s;
+}
+
+.card__icon-button:active .main-body {
+  fill: var(--accent-fill);
+  transition: fill 0.3s 0.05s;
+}
+
+/* like-icon */
+
 .like-icon {
   color: var(--accent-color);
-  width: 27px;
-  height: 24px;
 }
+
+.sparks {
+  opacity: 0;
+}
+
+.contour {
+  fill: currentColor;
+  transition: fill 0.1s linear;
+}
+
+/* like-icon is liked */
+
+.like-icon.is-liked .core {
+  fill: var(--accent-fill);
+  transition: fill 0.3s 0.05s;
+}
+
+.like-icon.is-liked .main-body {
+  fill: var(--accent-fill);
+  transition: fill 0.3s 0.05s;
+}
+
+.like-icon.is-liked .contour {
+  fill: var(--accent-fill);
+  transition: fill 0.3s 0.06s;
+}
+
+.like-icon.is-liked .heart {
+  transform-origin: center;
+  animation: heart-breathe 0.3s 0.1s ease-in alternate-reverse;
+}
+
+.like-icon.is-liked .sparks {
+  animation: sparks-glow 0.3s 0.3s ease-in alternate-reverse;
+}
+
+/* like-button */
 
 .card__like-button {
   width: 130px;

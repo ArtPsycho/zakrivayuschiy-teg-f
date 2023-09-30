@@ -15,6 +15,7 @@
   --main-weight: 400;
   --accent-weight: 700;
   --button-text-color: #fff;
+  --color-fill: #FF0000;
 }
 
 :root.theme-dark {
@@ -27,4 +28,5 @@
   --main-weight: 465;
   --accent-weight: 785;
   --button-text-color: #00CC14;
+  --color-fill: #FF0000;
 }
