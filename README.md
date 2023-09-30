@@ -1,1 +1,1 @@
-https://github.com/ArtPsycho/zakrivayuschiy-teg-f.git
+https://github.com/ArtPsycho/zakrivayuschiy-teg-f
