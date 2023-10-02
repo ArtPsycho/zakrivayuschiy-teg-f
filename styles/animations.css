@@ -15,31 +15,31 @@
 
 
 @keyframes arrow {
-    0% {
-      margin: 0 -20px;
-    }
+  0% {
+    margin: 0 -20px;
+  }
   
-    100% {
-      margin: 0 -16px;
-    }
+  100% {
+    margin: 0 -16px;
+  }
+}
+
+@keyframes heart-breathe {
+  0% {
+    scale: 1;
+  }
+  
+  100% {
+    scale: 1.5;
+  }
+}
+  
+@keyframes sparks-glow {
+  0% {
+    opacity: 0;
   }
 
-  @keyframes heart-breathe {
-    0% {
-      scale: 1;
-    }
-  
-    100% {
-      scale: 1.5;
-    }
+  100% {
+    opacity: 1;
   }
-  
-  @keyframes sparks-glow {
-    0% {
-      opacity: 0;
-    }
-  
-    100% {
-      opacity: 1;
-    }
-  }
+}
